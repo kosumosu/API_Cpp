@@ -4,14 +4,14 @@ All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-    * Redistributions in binary form must reproduce the above copyright
-      notice, this list of conditions and the following disclaimer in the
-      documentation and/or other materials provided with the distribution.
-    * Neither the name of the <organization> nor the
-      names of its contributors may be used to endorse or promote products
-      derived from this software without specific prior written permission.
+	* Redistributions of source code must retain the above copyright
+	  notice, this list of conditions and the following disclaimer.
+	* Redistributions in binary form must reproduce the above copyright
+	  notice, this list of conditions and the following disclaimer in the
+	  documentation and/or other materials provided with the distribution.
+	* Neither the name of the <organization> nor the
+	  names of its contributors may be used to endorse or promote products
+	  derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
 ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
@@ -56,51 +56,51 @@ http://www.sofaconventions.org
 
 namespace sofa
 {
-    
-    namespace String
-    {
-    
-        inline int String2Int(const std::string &str)
-        {
-            return atoi( str.c_str() );
-        }
-        
-        inline std::string ToLowerCase(const std::string &str)
-        {
-            std::string result = str;
-            std::transform( result.begin(), result.end(), result.begin(), ::tolower);
-            
-            return result;
-        }
-        
-        inline std::string Int2String(const int value)
-        {
-            std::ostringstream str;
-            str << value;
-            return str.str();
-        }
-        
-        inline bool IsInt(const char c)
-        {
-            return ( c >= '0' && c <= '9' );
-        }    
-        
-        inline std::string bool2string(const bool value)
-        {
-            return ( value == true ) ? ("true") : ("false");
-        }
+	
+	namespace String
+	{
+	
+		inline int String2Int(const std::string &str)
+		{
+			return atoi( str.c_str() );
+		}
+		
+		inline std::string ToLowerCase(const std::string &str)
+		{
+			std::string result = str;
+			std::transform( result.begin(), result.end(), result.begin(), ::tolower);
+			
+			return result;
+		}
+		
+		inline std::string Int2String(const int value)
+		{
+			std::ostringstream str;
+			str << value;
+			return str.str();
+		}
+		
+		inline bool IsInt(const char c)
+		{
+			return ( c >= '0' && c <= '9' );
+		}    
+		
+		inline std::string bool2string(const bool value)
+		{
+			return ( value == true ) ? ("true") : ("false");
+		}
 
-        inline std::string bool2yesorno(const bool value)
-        {
-            return ( value == true ) ? ("yes") : ("no");
-        }
-        
-        std::string PadWith(const std::string &src,
-                            const std::size_t totalLength     = 30,
-                            const std::string &pad            = " ");
-        
-        void PrintSeparationLine(std::ostream & output = std::cout);
-    }
+		inline std::string bool2yesorno(const bool value)
+		{
+			return ( value == true ) ? ("yes") : ("no");
+		}
+		
+		SOFA_API_FUNC std::string PadWith(const std::string &src,
+							const std::size_t totalLength     = 30,
+							const std::string &pad            = " ");
+		
+		SOFA_API_FUNC void PrintSeparationLine(std::ostream & output = std::cout);
+	}
 }
 
 #endif /* _SOFA_STRING_H__ */ 

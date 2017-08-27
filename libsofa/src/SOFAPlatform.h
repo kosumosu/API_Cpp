@@ -254,6 +254,15 @@ http://www.sofaconventions.org
 #endif
 
 //==============================================================================
+#if defined(SOFA_API_EXPORTS)
+#define SOFA_API __declspec( dllexport )
+#define SOFA_API_FUNC __declspec( dllexport )
+#elif defined(SOFA_API_IMPORTS)
+#define SOFA_API __declspec( dllimport )
+#define SOFA_API_FUNC __declspec( dllimport )
+#else
 #define SOFA_API
+#define SOFA_API_FUNC
+#endif
 
 #endif /* _SOFA_PLATFORM_H__ */

@@ -1,0 +1,5 @@
+/libsofa/build/win/.vs
+/libsofa/build/win/build
+/libsofa/build/win/Debug
+/libsofa/build/win/*.user
+/libsofa/lib/*
